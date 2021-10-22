@@ -1,0 +1,29 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha tests",
+    "start": "node src/api/server",
+    "dev": "nodemon src/api/server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.3.4",
+    "chai-http": "^4.3.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "eslint-config-trybe-backend": "^1.0.4",
+    "express": "^4.17.1",
+    "express-rescue": "^1.1.31",
+    "mocha": "^9.1.3",
+    "nodemon": "^2.0.14",
+    "pg": "^8.7.1",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.7.0",
+    "sinon": "^11.1.2"
+  }
+}
