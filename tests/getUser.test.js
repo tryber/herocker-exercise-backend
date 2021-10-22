@@ -1,12 +1,7 @@
-const chai = require('chai');
-const sinon = require('sinon');
+const supertest = require('supertest');
 const app = require('../src/api/app');
 const { User } = require('../src/models');
 
-const chaiHttp = require('chai-http');
-chai.use(chaiHttp);
-
-const { expect } = chai;
 
 describe('Resposta do endpoint GET /users', () => {
     let response;
@@ -20,21 +15,15 @@ describe('Resposta do endpoint GET /users', () => {
         updatedAt: "2021-10-21T18:02:44.106Z",
     }]
 
-    before(async () => {
-        sinon.stub(User, 'findAll').resolves(findAllMock);
+    beforeAll(async () => {
+        jest.spyOn(User, 'findAll').mockImplementation(() => findAllMock);
 
-        response = await chai.request(app).get('/users');
+        response = await supertest(app)
+            .get('/users');
     });
 
-    after(async () => {
-        User.findAll.restore();
-    });
-
-    it('deve retornar um array', () => {
-        expect(response.body).to.be.an('array');
-    });
     it('deve retornar um array de objetos idêntico ao usado no Stub', () => {
-        expect(response.body).to.deep.equal(findAllMock);
+        expect(response.body).toEqual(findAllMock);
     });
 
 })
