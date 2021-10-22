@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha tests",
+    "test": "jest tests",
     "start": "node src/api/server",
     "dev": "nodemon src/api/server"
   },
@@ -25,5 +25,9 @@
     "pg-hstore": "^2.3.4",
     "sequelize": "^6.7.0",
     "sinon": "^11.1.2"
+  },
+  "devDependencies": {
+    "jest": "^27.3.1",
+    "supertest": "^6.1.6"
   }
 }
