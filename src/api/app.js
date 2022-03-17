@@ -5,8 +5,12 @@ const errorMiddleware = require('../middlewares/error');
 
 const app = express();
 
-app.get('/users', rescue(UserController));
+app.use((req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  next();
+})
 
+app.get('/users', rescue(UserController));
 app.use(errorMiddleware);
 
 module.exports = app;
