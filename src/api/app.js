@@ -1,4 +1,5 @@
 const express = require('express');
+require('dotenv').config();
 const rescue = require('express-rescue');
 const cors = require('cors');
 const UserController = require('../controllers/user');
