@@ -18,7 +18,8 @@
     "express-rescue": "^1.1.31",
     "pg": "^8.7.1",
     "pg-hstore": "^2.3.4",
-    "sequelize": "^6.7.0"
+    "sequelize": "^6.7.0",
+    "sequelize-cli": "^6.4.1"
   },
   "devDependencies": {
     "eslint-config-trybe-backend": "^1.0.4",
