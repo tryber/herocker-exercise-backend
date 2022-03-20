@@ -6,7 +6,7 @@ const UserController = require('../controllers/user');
 const errorMiddleware = require('../middlewares/error');
 
 const app = express();
-// Tentando conectar o back com o banco
+
 app.use(cors());
 
 app.use((req, res, next) => {
