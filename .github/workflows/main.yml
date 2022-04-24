@@ -6,3 +6,11 @@
         steps:
           - uses: actions/checkout@v1
           - uses: stefanoeb/eslint-action@1.0.2
+      jest:
+        runs-on: ubuntu-latest
+        steps:
+          - uses: actions/checkout@v1
+          - name: Instala dependências
+            run: npm install
+          - name: Roda os testes do projeto
+            run: npm test 
