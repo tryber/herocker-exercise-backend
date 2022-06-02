@@ -1,3 +1,13 @@
 {
-    "extends": "eslint-config-trybe-backend"
+  "extends": "eslint-config-trybe-backend",
+  "rules": {
+    "max-lines-per-function": [
+      "error",
+      {
+        "max": 2000,
+        "skipBlankLines": true,
+        "skipComments": true
+      }
+    ]
+  }
 }
