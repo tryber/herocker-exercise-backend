@@ -6,8 +6,9 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
       - uses: actions/checkout@v2
-      - uses: actions/javascript-action@v1
-      - run: javascript -c "console.log('Olá Abner!!')"
+      - uses: actions/hello-world-javascript-action@main
+        with:
+          who-to-greet: Abner
 
 
 
