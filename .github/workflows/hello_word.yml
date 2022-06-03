@@ -1,0 +1,23 @@
+name: hello_workflow
+on: [push, pull_request]
+
+jobs:
+ eslint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: git clone repostitory
+        uses: actions/checkout@v2
+
+      - name: Instala o node
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+      
+      - name: instala as dependencias
+        run: npm install
+
+      - name: roda o lint
+        run: npx eslint .
+
+
+

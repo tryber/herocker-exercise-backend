@@ -21,7 +21,9 @@
     "sequelize": "^6.7.0"
   },
   "devDependencies": {
-    "eslint-config-trybe-backend": "^1.0.4",
+    "eslint": "^8.16.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
     "jest": "^27.3.1",
     "nodemon": "^2.0.14",
     "supertest": "^6.1.6"
