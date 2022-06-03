@@ -6,8 +6,8 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
       - uses: actions/checkout@v2
-      - uses: actions/setup-python@v2
-      - run: python -c "print('Olá Abner!!')"
+      - uses: actions/javascript-action@v1
+      - run: javascript -c "console.log('Olá Abner!!')"
 
 
 
