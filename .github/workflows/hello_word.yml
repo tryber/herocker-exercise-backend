@@ -1,14 +1,23 @@
 name: hello_workflow
-on: [push]
+on: [push, pull_request]
 
 jobs:
-  print_hello:
+ eslint:
     runs-on: ubuntu-latest
-    steps: 
-      - uses: actions/checkout@v2
-      - uses: actions/hello-world-javascript-action@main
+    steps:
+      - name: git clone repostitory
+        uses: actions/checkout@v2
+
+      - name: Instala o node
+        uses: action/setup-node@v2
         with:
-          who-to-greet: Abner
+          node-version: 14
+      
+      - name: instala as dependencias
+        run: npm install
+
+      - name: roda o lint
+        run: npx eslint .
 
 
 
