@@ -1,0 +1,13 @@
+name: hello_workflow
+on: [push]
+
+jobs:
+  print_hello:
+    runs-on: ubuntu-latest
+    steps: 
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+      - run: python -c "print('Olá Abner!!')"
+
+
+
