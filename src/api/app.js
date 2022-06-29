@@ -6,7 +6,7 @@ const errorMiddleware = require('../middlewares/error');
 
 const app = express();
 
-app.use(cors);
+app.use(cors());
 
 app.get('/users', rescue(UserController));
 
