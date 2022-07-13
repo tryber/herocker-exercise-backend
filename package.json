@@ -2,7 +2,7 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "/src/api/server.js",
   "scripts": {
     "test": "jest tests",
     "start": "node src/api/server",
@@ -18,12 +18,13 @@
     "express-rescue": "^1.1.31",
     "pg": "^8.7.1",
     "pg-hstore": "^2.3.4",
-    "sequelize": "^6.7.0"
+    "sequelize": "^6.21.3"
   },
   "devDependencies": {
     "eslint-config-trybe-backend": "^1.0.4",
     "jest": "^27.3.1",
     "nodemon": "^2.0.14",
+    "sequelize-cli": "^6.4.1",
     "supertest": "^6.1.6"
   }
 }
