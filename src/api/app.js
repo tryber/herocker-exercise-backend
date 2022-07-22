@@ -5,7 +5,7 @@ const errorMiddleware = require('../middlewares/error');
 
 const app = express();
 
-app.get('/users', rescue(UserController));
+app.get('/', rescue(UserController));
 
 app.use(errorMiddleware); 
 
