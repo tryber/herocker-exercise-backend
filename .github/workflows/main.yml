@@ -1,0 +1,12 @@
+on: [push, pull_request]
+
+jobs:
+  eslint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: Instala dependências
+        run: npm install
+      - name: Roda ESlint
+        run: npm run lint
