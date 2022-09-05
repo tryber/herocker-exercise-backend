@@ -7,6 +7,6 @@ const app = express();
 
 app.get('/users', rescue(UserController));
 
-app.use(errorMiddleware);
+app.use(errorMiddleware); 
 
 module.exports = app;
