@@ -14,10 +14,10 @@ module.exports = {
     dialect: 'postgres',
   },
   production: {
-    username: 'root',
-    password: null,
-    database: 'database_test',
-    host: '127.0.0.1',
+    username: 'postgres',
+    password: 'TVRah4OgcadoFAev',
+    database: 'postgres',
+    host: 'db.kxppsrohqnevwcqrfuou.supabase.co',
     dialect: 'postgres',
   },
 };
