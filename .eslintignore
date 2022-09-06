@@ -1,2 +1,3 @@
 */models/index.js
-*/migrations/*
+src/sequelize/migrations/*.js
+/tests/*.test.js
