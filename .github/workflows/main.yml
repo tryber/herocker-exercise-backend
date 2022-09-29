@@ -10,3 +10,12 @@ jobs:
         run: npm install
       - name: Roda ESlint
         run: npm run lint
+
+jest:
+  runs-on: ubuntu-latest
+  steps:
+    - uses: actions/checkout@v1
+    - name: Instala dependências
+      run: npm install
+    - name: Roda os testes do projeto
+      run: npm test
