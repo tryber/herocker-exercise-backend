@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jest tests",
     "start": "node src/api/server",
-    "dev": "nodemon src/api/server"
+    "dev": "nodemon src/api/server",
+    "lint": "eslint --no-inline-config --ext .js,.jsx --no-error-on-unmatched-pattern -c .eslintrc.json ."
   },
   "keywords": [],
   "author": "",
